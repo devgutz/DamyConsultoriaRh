@@ -1,5 +1,5 @@
-/* Termos de Uso — identidade editorial da Damy.
-   Esta folha é carregada depois da base compartilhada styles.css. */
+/* Páginas legais (Termos e Privacidade) — identidade editorial da Damy.
+   Carregada depois da base compartilhada styles.css. */
 
 /* O cabeçalho acompanha a abertura escura desta página. */
 .site-header {
@@ -469,6 +469,17 @@
 
 .legal-content p:last-child {
   margin-bottom: 0;
+}
+
+.legal-content p a {
+  border-bottom: 1px solid currentColor;
+  color: #93513b;
+  font-weight: 700;
+}
+
+.legal-content p a:hover,
+.legal-content p a:focus-visible {
+  color: var(--ink);
 }
 
 .legal-content #servicos {

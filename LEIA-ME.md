@@ -1,17 +1,31 @@
-# Damy Consultoria de RH
+# Damy Consultoria de RH — pacote de publicação
 
-Site estático com a identidade creme, verde sálvia e terracota da versão anterior, adaptado para consultoria em recursos humanos. O símbolo enviado pela cliente está em `damy-rh-symbol.png` e é usado no cabeçalho, no rodapé, na seção de contato e no favicon. Os demais elementos gráficos são criados em CSS.
+Site estático em português para `https://devgutz.github.io/DamyConsultoriaRh/`. Mantém a identidade em creme, verde sálvia e terracota, com o símbolo enviado pela cliente em `damy-rh-symbol.png`. Os elementos gráficos das páginas são feitos em CSS.
 
-## Publicação
+## Arquivos
 
-Publique **index.html**, **termos-de-uso.html**, **styles.css**, **home.css**, **termos.css**, **favicon.svg**, **damy-rh-symbol.png** e **robots.txt** no diretório público do site, preservando os nomes dos arquivos. `styles.css` contém a identidade visual e os elementos compartilhados; `home.css` estiliza a página inicial; `termos.css` estiliza os Termos de Uso. Cada HTML carrega a base compartilhada antes de sua folha específica. Confira se o servidor entrega o arquivo em `https://SEU-DOMINIO/robots.txt`: regras de um `robots.txt` dentro de uma subpasta não se aplicam ao domínio inteiro. Em GitHub Pages de projeto com endereço `usuario.github.io/repositorio/`, o arquivo precisará ser configurado na raiz de `usuario.github.io` para ter efeito nesse host.
+| Arquivo | Uso |
+| --- | --- |
+| `index.html` | Página inicial e acesso aos quatro serviços. |
+| `estruturacao-de-rh.html`, `recrutamento-e-selecao.html`, `treinamento-e-desenvolvimento.html`, `desenvolvimento-de-liderancas.html` | Páginas próprias de cada serviço. |
+| `termos-de-uso.html`, `politica-de-privacidade.html` | Documentos do site. |
+| `styles.css`, `home.css`, `servico.css`, `termos.css` | Base comum e estilos das páginas inicial, de serviços e legais. |
+| `damy-rh-symbol.png`, `favicon.svg` | Símbolo e ícone. |
+| `sitemap.xml`, `robots.txt` | Arquivos técnicos. |
+| `robots-raiz-github-pages.txt` | Modelo para a raiz de `devgutz.github.io`; **não** publicá-lo com esse nome como arquivo ativo. |
 
-Depois de definir a URL pública definitiva, inclua no `<head>` do HTML `link rel="canonical"` e `meta property="og:url"` com essa URL absoluta. Se desejar publicar um sitemap XML, use a mesma URL pública absoluta para a página e para a diretiva `Sitemap:` no `robots.txt`. Não foram inseridos URLs fictícios para evitar apontar os mecanismos de busca para um endereço antigo ou incorreto.
+## Publicação no GitHub Pages
 
-Confirme com a cliente o número de WhatsApp `(11) 96745-0869`, herdado do arquivo recebido, e o escopo exato dos serviços antes da publicação. Se a página antiga mudar de endereço, configure um redirecionamento permanente para a nova URL no serviço de hospedagem.
+Publique os arquivos do site na raiz do repositório que alimenta `/DamyConsultoriaRh/`, mantendo nomes e links relativos. Não publique `index(1).html`: essa cópia de trabalho não faz parte do pacote e criaria outra URL para a página inicial. Abra a página inicial, cada serviço, os Termos, a Política de Privacidade e `sitemap.xml` depois da atualização para conferir o resultado ao vivo.
 
-## Revisão dos Termos antes da publicação
+O GitHub Pages deste projeto usa o host `devgutz.github.io`. O arquivo `robots.txt` dentro de `/DamyConsultoriaRh/` **não controla o rastreamento desse host**. Para tornar ativa a diretiva `Sitemap`, coloque o conteúdo de `robots-raiz-github-pages.txt` como `robots.txt` na raiz do site `https://devgutz.github.io/` (normalmente no repositório de usuário `devgutz.github.io`, se existir). Se outros projetos compartilham o host, preserve as regras e sitemaps que já estiverem nesse arquivo e acrescente a linha deste projeto. A ausência de um `robots.txt` na raiz não bloqueia o rastreamento por padrão.
 
-Os Termos descrevem o site estático atual, sem cadastro, pagamentos nem contratação automática. Confirme o nome ou razão social e CNPJ/CPF do responsável pela operação, o canal de contato, o escopo real dos serviços e a identificação que deve constar na página. Publique uma Política de Privacidade específica, coerente com hospedagem, eventuais ferramentas de análise, WhatsApp, retenção e fornecedores efetivamente usados. Se o site ganhar formulários, contas, pagamentos ou processos seletivos, atualize os Termos antes de ativar essas funções. Recomenda-se revisão jurídica da versão final.
+As URLs canônicas, `og:url`, dados estruturados e sitemap foram definidos para o endereço público acima. Se o domínio mudar, atualize todos antes da publicação. Depois, configure o redirecionamento do endereço antigo quando possível.
 
-As palavras-chave relevantes aparecem de forma natural no título, na descrição, no título principal e nas seções de serviços. A metatag `keywords` contém apenas sete termos coerentes com o conteúdo; o Google não usa essa metatag como sinal de classificação.
+## Google Search Console
+
+Verifique a propriedade correspondente a `https://devgutz.github.io/DamyConsultoriaRh/` ou uma propriedade de domínio que a inclua. Envie `https://devgutz.github.io/DamyConsultoriaRh/sitemap.xml` em **Sitemaps**. Use **Inspeção de URL** para verificar a página inicial e as páginas de serviços; envie a solicitação de indexação se necessário. O sitemap e as metatags são sinais, não garantias de indexação ou posição.
+
+## Revisão com a cliente antes de considerar a entrega final
+
+Confirme o número `(11) 96745-0869`, o nome empresarial ou identificação pública adequada da responsável, o escopo real dos quatro serviços e o canal para pedidos de privacidade. Os textos legais descrevem esta versão estática, sem formulário, analytics, pagamentos ou recebimento de currículos no site. Confira a operação real de WhatsApp, a conservação das conversas, fornecedores e bases legais com a cliente e, quando necessário, com orientação jurídica. Se forem adicionados formulários, cookies, analytics ou fluxos de seleção de candidatos, revise a Política de Privacidade e os Termos antes de ativá-los.
